@@ -1,2 +1,32 @@
-# settings-git
-Alais Git
+# Settings-git
+
+* Alais Git
+
+[user]
+	email = <usuario@provedor.com>
+  name = <usuario>
+[core]
+	autocrlf = true
+[alias]
+	rt = remote
+	rt-v = remote -v
+	st = status
+	br = branch
+	ck = checkout
+	ci = commit -m
+	ci-a = commit -a -m
+	am = --amend
+	df = diff
+	ad-i = add -i
+	lg-p = log -p
+	wh = whatchanged
+	wh-p = whatchanged -p
+	unstage = reset HEAD --
+	publish = !git checkout master && git pull origin master && git rebase master develop && git checkout master && git merge develop && git push origin master:master && git checkout develop
+[gui]
+	recentrepo = Path respositori default
+
+
+# push -u ou --set-upstream. Atrela a branch remota à local 
+# fazendo com que não seja mais necessário passar como 
+# parâmetros a origem e a branch
